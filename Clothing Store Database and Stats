@@ -1,0 +1,25 @@
+--Create a clothing store database
+
+CREATE TABLE clothing_store (id INTEGER PRIMARY KEY, name TEXT, quantity INTEGER, price INTEGER);
+
+INSERT INTO clothing_store VALUES (1, "Pants", 4, 5.00);
+INSERT INTO clothing_store VALUES (2, "Blouse", 8, 10.00);
+INSERT INTO clothing_store VALUES (3, "Tank", 10, 8.00);
+INSERT INTO clothing_store VALUES (4, "Dress", 15, 20.00);
+INSERT INTO clothing_store VALUES (5, "Bags", 4, 5.00);
+INSERT INTO clothing_store VALUES (6, "Clips", 4, 5.00);
+INSERT INTO clothing_store VALUES (7, "Bra", 4, 5.00);
+INSERT INTO clothing_store VALUES (8, "Underwear", 4, 5.00);
+INSERT INTO clothing_store VALUES (9, "Socks", 4, 5.00);
+INSERT INTO clothing_store VALUES (10, "Slippers", 4, 5.00);
+INSERT INTO clothing_store VALUES (11, "Cros", 4, 5.00);
+INSERT INTO clothing_store VALUES (12, "Sandals", 4, 5.00);
+INSERT INTO clothing_store VALUES (13, "Joggers", 4, 5.00);
+INSERT INTO clothing_store VALUES (14, "Capri", 4, 5.00);
+INSERT INTO clothing_store VALUES (15, "Jeans", 4, 5.00);
+
+-- display the database inventory by price 
+SELECT price, SUM(quantity) FROM clothing_store group by price;
+
+-- display inventory less that 21
+SELECT * FROM clothing_store WHERE price < 21;
